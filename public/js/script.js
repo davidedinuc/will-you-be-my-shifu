@@ -116,38 +116,3 @@ function refreshBanner() {
     banner.src = src;
 }
 
-function changeLanguage() {
-    const selectElement = document.getElementById("language-select");
-    const selectedLanguage = selectElement.value;
-    language = selectedLanguage;
-
-    // Update question heading
-    const questionHeading = document.getElementById("question-heading");
-    if (language === "french") {
-        questionHeading.textContent = "Tu veux être mon valentin?";
-    } else if (language === "thai") {
-        questionHeading.textContent = "คืนดีกับเราได้อ่ะป่าว?";
-    } else {
-        questionHeading.textContent = "Will you be my valentine?";
-    }
-
-    // Reset yes button text
-    yes_button.innerHTML = answers_yes[language];
-
-    // Reset button text to first in the new language
-    if (clicks === 0) {
-        no_button.innerHTML = answers_no[language][0];
-    } else {
-        no_button.innerHTML = answers_no[language][clicks];
-    }
-
-    // Update success message
-    const successMessage = document.getElementById("success-message");
-    if (language === "french") {
-        successMessage.textContent = "Yepppie, à bientôt :3";
-    } else if (language === "thai") {
-        successMessage.textContent = "ฮูเร่ คืนดีกันแล้วน้า :3";
-    } else {
-        successMessage.textContent = "Yepppie, see you sooonnn :3";
-    }
-}
