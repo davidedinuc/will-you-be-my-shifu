@@ -1,19 +1,19 @@
 const answers_no = {
     english: [
         "No",
-        "Sei sicura?",
-        "Sei davvero sicura??",
-        "Sei davvero davvero sicura???",
-        "Ci vuoi pensare ancora un po'?",
-        "Non credi nelle seconde opportunità?",
-        "Ma che modo è?",
-        "Magari ne possiamo parlare?",
-        "Non lo chiedero' di nuovo!",
-        "Ok stai urtando i miei sentimenti!",
-        "Mi sembra eccessivo",
-        "Dire di no una volta è ok ma 10 mi sembra eccessivo",
-        "In fin dei conti la trap non è male",
-        "Catania è meglio di palermo",
+        "Are you sure?",
+        "Are you really sure??",
+        "Are you really realy sure???",
+        "Think again?",
+        "Don't believe in second chances?",
+        "Why are you being so cold?",
+        "Maybe we can talk about it?",
+        "I am not going to ask again!",
+        "Ok now this is hurting my feelings!",
+        "You are now just being mean!",
+        "Why are you doing this to me?",
+        "Please give me a chance!",
+        "I am begging you to stop!",
         "Ok, Let's just start over.."
     ],
     french: [
@@ -98,7 +98,7 @@ no_button.addEventListener('click', () => {
 yes_button.addEventListener('click', () => {
     // change banner gif path
     let banner = document.getElementById('banner');
-    banner.src = "public/images/yes.gif";
+    banner.src = "public/images/baci.jpg";
     refreshBanner();
     // hide buttons div
     let buttons = document.getElementsByClassName('buttons')[0];
@@ -144,10 +144,10 @@ function changeLanguage() {
     // Update success message
     const successMessage = document.getElementById("success-message");
     if (language === "french") {
-        successMessage.textContent = "Ci vediamo stasera <3";
+        successMessage.textContent = "Yepppie, à bientôt :3";
     } else if (language === "thai") {
-        successMessage.textContent = "Ci vediamo stasera <3";
+        successMessage.textContent = "ฮูเร่ คืนดีกันแล้วน้า :3";
     } else {
-        successMessage.textContent = "Ci vediamo stasera <3";
+        successMessage.textContent = "Yepppie, see you sooonnn :3";
     }
 }
